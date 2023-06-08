@@ -29,17 +29,17 @@ namespace IDPP_lab4_8
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             this.btnSelectDriver = new System.Windows.Forms.Button();
             this.fBrowserDriver = new System.Windows.Forms.FolderBrowserDialog();
             this.btnSelectFile = new System.Windows.Forms.Button();
@@ -59,13 +59,14 @@ namespace IDPP_lab4_8
             // btnSelectDriver
             // 
             this.btnSelectDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSelectDriver.Location = new System.Drawing.Point(13, 17);
+            this.btnSelectDriver.Location = new System.Drawing.Point(17, 21);
+            this.btnSelectDriver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSelectDriver.Name = "btnSelectDriver";
-            this.btnSelectDriver.Size = new System.Drawing.Size(125, 29);
+            this.btnSelectDriver.Size = new System.Drawing.Size(167, 36);
             this.btnSelectDriver.TabIndex = 0;
-            this.btnSelectDriver.Text = "SelectDriver";
+            this.btnSelectDriver.Text = "SelectDrive";
             this.btnSelectDriver.UseVisualStyleBackColor = true;
-            this.btnSelectDriver.Click += new System.EventHandler(this.btnSelectDriver_Click);
+            this.btnSelectDriver.Click += new System.EventHandler(this.btnSelectDrive_Click);
             // 
             // fBrowserDriver
             // 
@@ -74,9 +75,10 @@ namespace IDPP_lab4_8
             // btnSelectFile
             // 
             this.btnSelectFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSelectFile.Location = new System.Drawing.Point(13, 52);
+            this.btnSelectFile.Location = new System.Drawing.Point(17, 64);
+            this.btnSelectFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSelectFile.Name = "btnSelectFile";
-            this.btnSelectFile.Size = new System.Drawing.Size(125, 29);
+            this.btnSelectFile.Size = new System.Drawing.Size(167, 36);
             this.btnSelectFile.TabIndex = 1;
             this.btnSelectFile.Text = "Select File";
             this.btnSelectFile.UseVisualStyleBackColor = true;
@@ -85,9 +87,10 @@ namespace IDPP_lab4_8
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSave.Location = new System.Drawing.Point(12, 329);
+            this.btnSave.Location = new System.Drawing.Point(13, 404);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(382, 30);
+            this.btnSave.Size = new System.Drawing.Size(509, 37);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save File";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -97,35 +100,39 @@ namespace IDPP_lab4_8
             // 
             this.tBoxEdit.Enabled = false;
             this.tBoxEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBoxEdit.Location = new System.Drawing.Point(12, 91);
+            this.tBoxEdit.Location = new System.Drawing.Point(16, 112);
+            this.tBoxEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tBoxEdit.Multiline = true;
             this.tBoxEdit.Name = "tBoxEdit";
-            this.tBoxEdit.Size = new System.Drawing.Size(383, 233);
+            this.tBoxEdit.Size = new System.Drawing.Size(509, 286);
             this.tBoxEdit.TabIndex = 3;
             // 
             // tBoxFilePath
             // 
             this.tBoxFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBoxFilePath.Location = new System.Drawing.Point(144, 52);
+            this.tBoxFilePath.Location = new System.Drawing.Point(192, 64);
+            this.tBoxFilePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tBoxFilePath.Name = "tBoxFilePath";
-            this.tBoxFilePath.Size = new System.Drawing.Size(253, 29);
+            this.tBoxFilePath.Size = new System.Drawing.Size(336, 34);
             this.tBoxFilePath.TabIndex = 4;
             // 
             // lblAction
             // 
             this.lblAction.AutoSize = true;
             this.lblAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAction.Location = new System.Drawing.Point(160, 320);
+            this.lblAction.Location = new System.Drawing.Point(213, 394);
+            this.lblAction.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAction.Name = "lblAction";
-            this.lblAction.Size = new System.Drawing.Size(0, 24);
+            this.lblAction.Size = new System.Drawing.Size(0, 29);
             this.lblAction.TabIndex = 5;
             // 
             // tBoxDriverPath
             // 
             this.tBoxDriverPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBoxDriverPath.Location = new System.Drawing.Point(144, 17);
+            this.tBoxDriverPath.Location = new System.Drawing.Point(192, 21);
+            this.tBoxDriverPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tBoxDriverPath.Name = "tBoxDriverPath";
-            this.tBoxDriverPath.Size = new System.Drawing.Size(251, 29);
+            this.tBoxDriverPath.Size = new System.Drawing.Size(333, 34);
             this.tBoxDriverPath.TabIndex = 6;
             // 
             // openFileDialog
@@ -134,42 +141,44 @@ namespace IDPP_lab4_8
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(402, 12);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(536, 15);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
-            series1.BorderWidth = 4;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            series1.LabelBackColor = System.Drawing.Color.White;
-            series1.LabelBorderColor = System.Drawing.Color.Black;
-            series1.Legend = "Legend1";
-            series1.Name = "Signal";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            series1.Points.Add(dataPoint6);
-            series1.Points.Add(dataPoint7);
-            series1.Points.Add(dataPoint8);
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(669, 312);
+            series2.BorderWidth = 4;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            series2.LabelBackColor = System.Drawing.Color.White;
+            series2.LabelBorderColor = System.Drawing.Color.Black;
+            series2.Legend = "Legend1";
+            series2.Name = "Signal";
+            series2.Points.Add(dataPoint9);
+            series2.Points.Add(dataPoint10);
+            series2.Points.Add(dataPoint11);
+            series2.Points.Add(dataPoint12);
+            series2.Points.Add(dataPoint13);
+            series2.Points.Add(dataPoint14);
+            series2.Points.Add(dataPoint15);
+            series2.Points.Add(dataPoint16);
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(892, 384);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
             // 
             // numByteNumber
             // 
             this.numByteNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numByteNumber.Location = new System.Drawing.Point(402, 330);
+            this.numByteNumber.Location = new System.Drawing.Point(536, 406);
+            this.numByteNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numByteNumber.Name = "numByteNumber";
-            this.numByteNumber.Size = new System.Drawing.Size(56, 29);
+            this.numByteNumber.Size = new System.Drawing.Size(75, 34);
             this.numByteNumber.TabIndex = 8;
             this.numByteNumber.ValueChanged += new System.EventHandler(this.numByteNumber_ValueChanged);
             // 
@@ -177,16 +186,17 @@ namespace IDPP_lab4_8
             // 
             this.lblByte.AutoSize = true;
             this.lblByte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblByte.Location = new System.Drawing.Point(493, 335);
+            this.lblByte.Location = new System.Drawing.Point(657, 412);
+            this.lblByte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblByte.Name = "lblByte";
-            this.lblByte.Size = new System.Drawing.Size(0, 24);
+            this.lblByte.Size = new System.Drawing.Size(0, 29);
             this.lblByte.TabIndex = 9;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1086, 365);
+            this.ClientSize = new System.Drawing.Size(1448, 449);
             this.Controls.Add(this.lblByte);
             this.Controls.Add(this.numByteNumber);
             this.Controls.Add(this.chart1);
@@ -197,6 +207,7 @@ namespace IDPP_lab4_8
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnSelectFile);
             this.Controls.Add(this.btnSelectDriver);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "USB IDPP";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
