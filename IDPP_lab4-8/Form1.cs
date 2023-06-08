@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
@@ -10,10 +11,12 @@ namespace IDPP_lab4_8
 {
     public partial class Form1 : Form
     {
-        private static byte[] arrBytes = Enumerable.Range(192, 64).Select(x => (byte)x).ToArray();
+        private static byte[] arrBytes = Enumerable.Range(192, 64).Select(x => (byte)x)
+            .Concat(Enumerable.Range(30, 39).Select(x => (byte)x)).ToArray();
         private static Encoding w1251 = Encoding.GetEncoding(1251);
         private static char[] arrChars = w1251.GetChars(arrBytes);
         private static Dictionary<byte, char> alfabet = new Dictionary<byte, char>();
+
         public Form1()
         {
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -29,7 +32,7 @@ namespace IDPP_lab4_8
             alfabet.Add(179, 'і');
         }
 
-        private void btnSelectDriver_Click(object sender, EventArgs e)
+        private void btnSelectDrive_Click(object sender, EventArgs e)
         {
             fBrowserDriver.ShowDialog();
             tBoxDriverPath.Text = fBrowserDriver.SelectedPath;
@@ -56,10 +59,17 @@ namespace IDPP_lab4_8
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            StreamWriter writer = File.CreateText(tBoxDriverPath.Text + @"\test.txt");
-            writer.Write(tBoxEdit.Text);
-            writer.Close();
-            ShowByte();
+            if (string.IsNullOrWhiteSpace(tBoxDriverPath.Text))
+            {
+                MessageBox.Show("Please select drive");
+            }
+            else
+            {
+                StreamWriter writer = File.CreateText(tBoxDriverPath.Text + @"\test.txt");
+                writer.Write(tBoxEdit.Text);
+                writer.Close();
+                ShowByte();
+            }
         }
 
         private void ShowByte()
@@ -89,15 +99,31 @@ namespace IDPP_lab4_8
                 x++;
             }
             chart1.Series["Signal"].Points.AddXY(x, last);
-            lblByte.Text = a.Value + " = " + bits; 
+            lblByte.Text = a.Value + " = " + bits;
         }
 
         private void numByteNumber_ValueChanged(object sender, EventArgs e)
         {
             if (numByteNumber.Value >= tBoxEdit.Text.Length)
+            {
+                int number = ((NumericUpDown)sender).Tag == null ? 0 : (int)((NumericUpDown)sender).Tag;
+                SetNumericUpDownValue(numByteNumber, number);
                 MessageBox.Show("There are no such byte");
+
+            }
             else
                 ShowByte();
+
+        }
+        private void SetNumericUpDownValue(NumericUpDown control, decimal value)
+        {
+            if (control == null) throw new ArgumentNullException(nameof(control));
+            var currentValueField = control.GetType().GetField("currentValue", BindingFlags.Instance | BindingFlags.NonPublic);
+            if (currentValueField != null)
+            {
+                currentValueField.SetValue(control, value);
+                control.Text = value.ToString();
+            }
         }
     }
 }
