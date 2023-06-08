@@ -29,17 +29,17 @@ namespace IDPP_lab4_8
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint25 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint26 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint27 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint28 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint29 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint30 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint31 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint32 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             this.btnSelectDriver = new System.Windows.Forms.Button();
             this.fBrowserDriver = new System.Windows.Forms.FolderBrowserDialog();
             this.btnSelectFile = new System.Windows.Forms.Button();
@@ -137,37 +137,37 @@ namespace IDPP_lab4_8
             // 
             // openFileDialog
             // 
-            this.openFileDialog.FileName = "oFileDialog";
+            
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Enabled = false;
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(536, 15);
             this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
-            series2.BorderWidth = 4;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            series2.LabelBackColor = System.Drawing.Color.White;
-            series2.LabelBorderColor = System.Drawing.Color.Black;
-            series2.Legend = "Legend1";
-            series2.Name = "Signal";
-            series2.Points.Add(dataPoint9);
-            series2.Points.Add(dataPoint10);
-            series2.Points.Add(dataPoint11);
-            series2.Points.Add(dataPoint12);
-            series2.Points.Add(dataPoint13);
-            series2.Points.Add(dataPoint14);
-            series2.Points.Add(dataPoint15);
-            series2.Points.Add(dataPoint16);
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chart1.Series.Add(series2);
+            series4.BorderWidth = 4;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            series4.LabelBackColor = System.Drawing.Color.White;
+            series4.LabelBorderColor = System.Drawing.Color.Black;
+            series4.Legend = "Legend1";
+            series4.Name = "Signal";
+            series4.Points.Add(dataPoint25);
+            series4.Points.Add(dataPoint26);
+            series4.Points.Add(dataPoint27);
+            series4.Points.Add(dataPoint28);
+            series4.Points.Add(dataPoint29);
+            series4.Points.Add(dataPoint30);
+            series4.Points.Add(dataPoint31);
+            series4.Points.Add(dataPoint32);
+            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(892, 384);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";

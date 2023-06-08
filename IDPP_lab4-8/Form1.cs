@@ -11,8 +11,10 @@ namespace IDPP_lab4_8
 {
     public partial class Form1 : Form
     {
-        private static byte[] arrBytes = Enumerable.Range(192, 64).Select(x => (byte)x)
-            .Concat(Enumerable.Range(30, 39).Select(x => (byte)x)).ToArray();
+        private static byte[] arrBytes =
+            Enumerable.Range(Constantes.START_ALPHABET_BYTE, Constantes.COUNT_ALPHABET_BYTE).Select(x => (byte)x)
+            .Concat(Enumerable.Range(Constantes.START_ALPHABET_NUMBER_BYTE, Constantes.COUNT_ALPHABET_NUMBER_BYTE).Select(x => (byte)x))
+            .ToArray();
         private static Encoding w1251 = Encoding.GetEncoding(1251);
         private static char[] arrChars = w1251.GetChars(arrBytes);
         private static Dictionary<byte, char> alfabet = new Dictionary<byte, char>();
@@ -30,6 +32,8 @@ namespace IDPP_lab4_8
             }
             alfabet.Add(178, 'І');
             alfabet.Add(179, 'і');
+            openFileDialog.DefaultExt = Constantes.TEXT_FILE_EXT;
+            openFileDialog.Filter = Constantes.TEXT_FILE_FILTER;
         }
 
         private void btnSelectDrive_Click(object sender, EventArgs e)
@@ -49,26 +53,43 @@ namespace IDPP_lab4_8
         private void ReadFromFile(string path)
         {
             tBoxEdit.Clear();
-            StreamReader reader = new StreamReader(path);
-            while (!reader.EndOfStream)
+            if (!string.IsNullOrEmpty(path))
             {
-                tBoxEdit.Text += reader.ReadLine();
+                StreamReader reader = new StreamReader(path);
+                while (!reader.EndOfStream)
+                {
+                    tBoxEdit.Text += reader.ReadLine();
+                }
+                reader.Close();
             }
-            reader.Close();
         }
 
+        private bool IsTextFile(string path)
+        {
+            if (!File.Exists(tBoxFilePath.Text)
+                || !tBoxFilePath.Text.EndsWith(Constantes.TEXT_FILE_ENDING))
+            {
+                return false;
+            }
+            return true;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tBoxDriverPath.Text))
+            if (!string.IsNullOrWhiteSpace(tBoxDriverPath.Text)
+                && !string.IsNullOrWhiteSpace(tBoxFilePath.Text)
+                && IsTextFile(tBoxFilePath.Text))
             {
-                MessageBox.Show("Please select drive");
-            }
-            else
-            {
-                StreamWriter writer = File.CreateText(tBoxDriverPath.Text + @"\test.txt");
-                writer.Write(tBoxEdit.Text);
-                writer.Close();
-                ShowByte();
+                try
+                {
+                    StreamWriter writer = File.CreateText(tBoxDriverPath.Text + Constantes.NEW_FILE_ENDING);
+                    writer.Write(tBoxEdit.Text);
+                    writer.Close();
+                    ShowByte();
+                }
+                catch(UnauthorizedAccessException )
+                {
+                    MessageBox.Show(Constantes.NEES_ADMIN_RIGHTS);
+                }
             }
         }
 
@@ -108,12 +129,9 @@ namespace IDPP_lab4_8
             {
                 int number = ((NumericUpDown)sender).Tag == null ? 0 : (int)((NumericUpDown)sender).Tag;
                 SetNumericUpDownValue(numByteNumber, number);
-                MessageBox.Show("There are no such byte");
-
             }
             else
                 ShowByte();
-
         }
         private void SetNumericUpDownValue(NumericUpDown control, decimal value)
         {
